@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Game do
-  it "initializes the object as an instance of the Game class" do
+  it "initializes the object as an instance of the Game class, the deck of cards and an empty current deck array" do
     go_fish = Game.new({:name => "Go Fish"})
     expect(go_fish).to be_an_instance_of Game
   end
@@ -16,16 +16,12 @@ describe Game do
     expect(go_fish.deck_in_play?).to eq true
   end
 
-  describe ".game_cards" do
-    it "creates an empty array for the cards to be passed to the Players Class" do
-      expect(Game.game_cards).to eq []
-    end
-
+  # describe ".game_cards" do
     it "chooses random cards to pass to the players" do
       go_fish = Game.new({:name => "Go Fish"})
       go_fish.pass_cards = 7
       expect(Game.game_cards.length).to eq 7
     end
-  end
+  # end
 
 end

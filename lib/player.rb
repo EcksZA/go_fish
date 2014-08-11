@@ -4,4 +4,8 @@ class Player
   def initialize(hash)
     @name = hash[:name]
   end
+
+  def current_deck
+    @current_deck = []
+  end
 end
