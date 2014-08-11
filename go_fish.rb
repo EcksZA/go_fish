@@ -11,16 +11,13 @@ def main_menu
   player_1 = Player.new({:name => name_1})
   @game.add_player(player_1)
   puts "Welcome to the game " + player_1.name + "!"
-  # puts "These are your cards:"
-  # (player_1.current_deck).each{|card| puts card}
+
   puts "\n"
   puts "Choose a name for the second player:"
   name_2 = gets.chomp
   player_2 = Player.new({:name => name_2})
   @game.add_player(player_2)
   puts "Welcome to the game " + player_2.name + "! \n"
-  # puts "These are your cards:"
-  # (player_2.current_deck).each{|card| puts card}
 
   play_game(player_1)
 end
@@ -74,7 +71,8 @@ def take_cards(matching_card, current_player, other_player)
   end
   other_player.current_deck.delete_if {|card| card.chop == matching_card.chop}
   puts "#{current_player.name} took #{count} card(s) from #{other_player.name}!"
-  play_game(other_player)
+  puts "#{current_player.name} plays again!"
+  play_game(current_player)
 end
 
 main_menu
