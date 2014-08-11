@@ -16,11 +16,11 @@ describe Game do
     expect(go_fish.deck_in_play?).to eq true
   end
 
-  # it "accepts a Player object" do
-  #   go_fish = Game.new({:name => "Go Fish"})
-  #   player_1 = Player.new({:name => "Xolani"})
-  #   go_fish.add_player(player_1)
-  #   expect(go_fish.players).to eq [player_1]
-  # end
+  it "accepts a Player object and passes 7 new cards to initialize the player's current deck" do
+    go_fish = Game.new({:name => "Go Fish"})
+    player_1 = Player.new({:name => "Xolani"})
+    go_fish.add_player(player_1)
+    expect(go_fish.players).to eq [player_1]
+  end
 
 end

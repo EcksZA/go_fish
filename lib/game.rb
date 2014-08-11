@@ -14,8 +14,16 @@ class Game
     @deck.length > 0
   end
 
-  # def add_player(object)
-  #   @players << object
-  # end
+  def add_player(object)
+    count = 1
+    loop do
+      moved_card = @deck.sample
+      object.current_deck << moved_card
+      @deck.delete(moved_card)
+      break if count == 7
+      count += 1
+    end
+    @players << object
+  end
 
 end
