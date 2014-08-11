@@ -20,5 +20,12 @@ describe Game do
     it "creates an empty array for the cards to be passed to the Players Class" do
       expect(Game.game_cards).to eq []
     end
+
+    it "chooses random cards to pass to the players" do
+      go_fish = Game.new({:name => "Go Fish"})
+      go_fish.pass_cards = 7
+      expect(Game.game_cards.length).to eq 7
+    end
   end
+
 end

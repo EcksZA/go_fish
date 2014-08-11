@@ -1,5 +1,6 @@
 class Game
-  attr_accessor :name
+  attr_accessor :name, :pass_cards
+
   @@game_cards = []
 
   def initialize(hash)
@@ -18,5 +19,15 @@ class Game
     @@game_cards
   end
 
+  def pass_cards=(number)
+    count = 1
+    loop do
+      moved_card = @deck.sample
+      @@game_cards << moved_card
+      @deck.delete(moved_card)
+      break if count == number
+      count += 1
+    end
+  end
 
 end
