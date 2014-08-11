@@ -16,12 +16,10 @@ describe Game do
     expect(go_fish.deck_in_play?).to eq true
   end
 
-  # describe ".game_cards" do
-    it "chooses random cards to pass to the players" do
-      go_fish = Game.new({:name => "Go Fish"})
-      go_fish.pass_cards = 7
-      expect(Game.game_cards.length).to eq 7
-    end
-  # end
+  it "chooses random cards to pass to the player's current deck" do
+    go_fish = Game.new({:name => "Go Fish"})
+    go_fish.pass_cards = 7
+    expect(go_fish.current_deck.length).to eq 7
+  end
 
 end

@@ -1,5 +1,5 @@
 class Game
-  attr_accessor :name, :deck, :game_cards, :pass_cards
+  attr_accessor :name, :deck, :current_deck
 
   def initialize(hash)
     @name = hash[:name]
@@ -7,7 +7,7 @@ class Game
              "6H", "6D", "6S", "6C", "7H", "7D", "7S", "7C", "8H", "8D", "8S", "8C", "9H", "9D", "9S", "9C",
              "10H", "10D", "10S", "10C", "JH", "JD", "JS", "JC", "QH", "QD", "QS", "QC", "KH", "KD", "KS", "KC",
              "AH", "AD", "AS", "AC"]
-    @game_cards = []
+    @current_deck = []
   end
 
   def deck_in_play?
@@ -18,7 +18,7 @@ class Game
     count = 1
     loop do
       moved_card = @deck.sample
-      @game_cards << moved_card
+      @current_deck << moved_card
       @deck.delete(moved_card)
       break if count == number
       count += 1
