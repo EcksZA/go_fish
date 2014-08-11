@@ -27,7 +27,7 @@ class Game
   end
 
   def toggle(player)
-    if player = @players[0]
+    if player == @players[0]
       @toggle = @players[1]
     else
       @toggle = @players[0]

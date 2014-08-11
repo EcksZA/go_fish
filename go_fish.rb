@@ -46,6 +46,7 @@ def check_card(choice, player)
       puts "You do not have that card! Try again"
       play_game(player)
       break
+    else
     end
   end
 end
