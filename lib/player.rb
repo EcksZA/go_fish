@@ -1,4 +1,6 @@
 class Player
+  attr_reader :name
+
   def initialize(hash)
     @name = hash[:name]
   end
