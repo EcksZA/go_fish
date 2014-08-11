@@ -25,4 +25,8 @@ class Game
     end
   end
 
+  def add_player(object)
+    @current_deck << object
+  end
+
 end
