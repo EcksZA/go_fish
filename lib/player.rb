@@ -1,11 +1,8 @@
 class Player
-  attr_reader :name
+  attr_reader :name, :current_deck
 
   def initialize(hash)
     @name = hash[:name]
-  end
-
-  def current_deck
     @current_deck = []
   end
 end
