@@ -10,6 +10,8 @@ class Game
   end
 
   def deck_in_play?
-    @deck.length > 0 ? (true) : (false)
+    @deck.length > 0
   end
+
+
 end
