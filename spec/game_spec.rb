@@ -23,4 +23,15 @@ describe Game do
     expect(go_fish.players).to eq [player_1]
   end
 
+  it "toggles between the players" do
+    go_fish = Game.new({:name => "Go Fish"})
+    player_1 = Player.new({:name => "Xolani"})
+    player_2 = Player.new({:name => "Ecks"})
+    go_fish.add_player(player_1)
+    go_fish.add_player(player_2)
+    go_fish.toggle(player_1)
+    expect(go_fish.toggle(player_1)).to eq player_2
+  end
+
+
 end

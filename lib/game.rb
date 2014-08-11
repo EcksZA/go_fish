@@ -26,4 +26,13 @@ class Game
     @players << object
   end
 
+  def toggle(player)
+    if player = @players[0]
+      @toggle = @players[1]
+    else
+      @toggle = player[0]
+    end
+    @toggle
+  end
+
 end
