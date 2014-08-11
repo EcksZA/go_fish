@@ -15,4 +15,10 @@ describe Game do
     go_fish = Game.new({:name => "Go Fish"})
     expect(go_fish.deck_in_play?).to eq true
   end
+
+  describe ".game_cards" do
+    it "creates an empty array for the cards to be passed to the Players Class" do
+      expect(Game.game_cards).to eq []
+    end
+  end
 end

@@ -1,5 +1,6 @@
 class Game
   attr_accessor :name
+  @@game_cards = []
 
   def initialize(hash)
     @name = hash[:name]
@@ -11,6 +12,10 @@ class Game
 
   def deck_in_play?
     @deck.length > 0
+  end
+
+  def Game.game_cards
+    @@game_cards
   end
 
 
