@@ -10,4 +10,13 @@ describe Player do
     player_1 = Player.new({:name => "Xolani"})
     expect(player_1.name).to eq "Xolani"
   end
+
+  it "adds a card to the players deck if told to go fish" do
+    go_fish = Game.new({:name => "Go Fish"})
+    player_1 = Player.new({:name => "Xolani"})
+    go_fish.card_hold
+    player_1.add_card(go_fish.card_hold)
+    expect(player_1.current_deck.length).to eq 1
+  end
+
 end
