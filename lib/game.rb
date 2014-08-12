@@ -1,3 +1,5 @@
+require 'pry'
+
 class Game
   attr_accessor :name, :deck, :players
 
@@ -33,6 +35,12 @@ class Game
       @toggle = @players[0]
     end
     @toggle
+  end
+
+  def card_hold
+    @card_hold = @deck.sample
+    @deck.delete(@card_hold)
+    @card_hold
   end
 
 end

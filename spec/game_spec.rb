@@ -33,5 +33,9 @@ describe Game do
     expect(go_fish.toggle(player_1)).to eq player_2
   end
 
-
+  it "removes and stores a card for a 'go fish situation' " do
+    go_fish = Game.new({:name => "Go Fish"})
+    go_fish.card_hold
+    expect(go_fish.card_hold.is_a?String).to eq true
+  end
 end
