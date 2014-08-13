@@ -1,5 +1,3 @@
-require 'pry'
-
 class Game
   attr_accessor :name, :deck, :players
 
@@ -42,5 +40,4 @@ class Game
     @deck.delete(@card_hold)
     @card_hold
   end
-
 end
