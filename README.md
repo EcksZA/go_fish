@@ -10,11 +10,14 @@ your oponent.
 
 BUGS
 ----
-The UI freezes on the second iteration. Work in Progress.
+When a player wins and chooses not to play again, the program does not exit.
 
 OPERATING INSTRUCTIONS
 ----------------------
-Work in progress!
+1. Download the ruby file onto a computer.
+2. Open the computer's terminal/command line (the computer must have at least ruby 1.9.3 installed).
+3. In the command line directory of the file, type *ruby go_fish.rb*.
+4. Follow the games command.
 
 AUTHOR
 ------
@@ -22,7 +25,7 @@ Xolani Mfuko
 
 DATE
 ----
-10 August 2014
+12 August 2014
 
 COPYING/LICENCE
 ---------------
