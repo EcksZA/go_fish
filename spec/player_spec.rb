@@ -28,5 +28,6 @@ describe Player do
     player_1.current_deck << "AH"
     player_1.current_deck << "2H"
     expect(player_1.score).to eq 1
+    expect(player_1.current_deck.length).to eq 1
   end
 end

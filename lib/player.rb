@@ -1,5 +1,3 @@
-require 'pry'
-
 class Player
   attr_accessor :name, :current_deck, :score
 
@@ -18,10 +16,9 @@ class Player
     index = 0
     test_card = []
     @current_deck.each {|card| test_card << card.chop}
-
     test_card.each do |card|
       if test_card.count(card) == 4
-        @current_deck.delete_if {|cut| cut[0] == card}
+        @current_deck.delete_if {|cut| cut[0] == card[0]}
         test_card.delete(card)
         @score += 1
         index -= 1
